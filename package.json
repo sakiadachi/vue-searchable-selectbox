@@ -1,7 +1,11 @@
 {
-  "name": "vue-searchable-selectbox",
+  "name": "@sakiadachi/vue-searchable-selectbox",
   "version": "0.0.0",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/sakiadachi/vue-searchable-selectbox.git",
   "files": [
     "dist"
   ],
