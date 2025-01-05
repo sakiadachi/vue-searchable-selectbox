@@ -1,14 +1,9 @@
 {
-	"name": "@sakiadachi/vue-searchable-selectbox",
-	"version": "0.0.2",
+	"name": "vue-searchable-selectbox",
+	"version": "0.0.0",
 	"type": "module",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/sakiadachi/vue-searchable-selectbox.git"
-	},
+	"description": "Filter the display items by string and select them in the dropdown.",
+	"license": "MIT",
 	"files": ["dist"],
 	"main": "./dist/vue-searchable-selectbox.umd.cjs",
 	"module": "./dist/vue-searchable-selectbox.js",
