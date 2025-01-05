@@ -9,13 +9,7 @@ export type SearchItemType = {
   searchText: string
 }
 
-export const fakeData: SearchItemType[] = [
-  {
-    key: 'a',
-    searchText: '山田 太郎',
-  },
-  {
-    key: 'b',
-    searchText: 'hogeの介',
-  },
-]
+export const fakeData: SearchItemType[] = Array.from({ length: 100 }, (_, i) => ({
+  key: `${i}-item-key`,
+  searchText: `${i} ${Math.random()}`,
+}))

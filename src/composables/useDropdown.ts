@@ -17,17 +17,17 @@ export const useDropdown = (searchItems: SearchItemType[]) => {
     isVisible.value = false
   }
 
-  const onClickItem = (newKey: string) => {
-    if (selectedKeys.value.includes(newKey)) {
-      selectedKeys.value = selectedKeys.value.filter((_) => _ !== newKey)
+  const onClickItem = (item: SearchItemType) => {
+    if (selectedKeys.value.includes(item.key)) {
+      selectedKeys.value = selectedKeys.value.filter((_) => _ !== item.key)
     } else {
-      selectedKeys.value = [...selectedKeys.value, newKey]
+      selectedKeys.value = [...selectedKeys.value, item.key]
     }
-    hideDropdown()
   }
 
   return {
     isVisible,
+    selectedKeys,
     selectedItems,
     showDropdown,
     hideDropdown,

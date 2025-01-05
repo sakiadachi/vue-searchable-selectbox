@@ -10,6 +10,7 @@ const timeoutId = ref<number>()
 
 /**
  * Delay the execution of function
+ * It rejects executing callback if a Promise before is not fulfilled.
  */
 export const useDebounce = (callback: Callback, ms: number): Promise<void> =>
   new Promise((resolve, reject) =>

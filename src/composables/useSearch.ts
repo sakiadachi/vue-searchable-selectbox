@@ -1,10 +1,13 @@
 import { computed, ref, watch } from 'vue'
-import { type SearchItemType } from '../fakeData'
+import type { SearchItemType } from '../fakeData'
 import { useDebounce } from './useDebounce'
 
 export const useSearch = (searchItems: SearchItemType[]) => {
   const inputText = ref('')
 
+  /**
+   * text to search items
+   */
   const searchText = ref('')
 
   const results = computed(() => {
@@ -13,7 +16,7 @@ export const useSearch = (searchItems: SearchItemType[]) => {
     }
     const split = searchText.value
       .trim()
-      .split(new RegExp(',| |, '))
+      .split(/,| |, /)
       .filter((v) => v.length > 0)
 
     return searchItems

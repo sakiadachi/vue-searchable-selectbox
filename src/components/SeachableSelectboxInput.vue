@@ -19,7 +19,7 @@ const inputRef = ref<HTMLInputElement>()
 
 <template>
   <div class="outer">
-    <label for="searchInput">{{ props.label }}</label>
+    <label v-if="props.label" for="searchInput">{{ props.label }}</label>
     <div class="selectbox">
       <input
         ref="inputRef"
@@ -27,7 +27,12 @@ const inputRef = ref<HTMLInputElement>()
         type="text"
         id="searchInput"
         @focus="emits('onFocus')"
-        @focusout="emits('onFocusOut')"
+        @focusout="
+          ($event) => {
+            console.log($event)
+            emits('onFocusOut')
+          }
+        "
         @click="emits('onClick')"
       />
       <button @click="emits('clear')" aria-label="Clear search text button">✖️</button>
