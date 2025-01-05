@@ -1,18 +1,18 @@
 {
-	"name": "vue-searchable-selectbox",
+	"name": "vue-light-searchable-selectbox",
 	"version": "0.0.0",
 	"type": "module",
 	"description": "Filter the display items by string and select them in the dropdown.",
 	"license": "MIT",
 	"files": ["dist"],
-	"main": "./dist/vue-searchable-selectbox.umd.cjs",
-	"module": "./dist/vue-searchable-selectbox.js",
+	"main": "./dist/vue-light-searchable-selectbox.umd.cjs",
+	"module": "./dist/vue-light-searchable-selectbox.js",
 	"exports": {
 		".": {
-			"import": "./dist/vue-searchable-selectbox.js",
-			"require": "./dist/vue-searchable-selectbox.umd.cjs"
+			"import": "./dist/vue-light-searchable-selectbox.js",
+			"require": "./dist/vue-light-searchable-selectbox.umd.cjs"
 		},
-		"./style.css": "./dist/vue-searchable-selectbox.css"
+		"./style.css": "./dist/vue-light-searchable-selectbox.css"
 	},
 	"scripts": {
 		"dev": "vite",
